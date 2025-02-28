@@ -8,4 +8,8 @@ import kotlinx.coroutines.flow.asStateFlow
 class LoginViewModel: ViewModel()  {
     private val _username = MutableStateFlow("")
     val username: StateFlow<String> = _username.asStateFlow()
+
+    fun updateUsername(newUsername: String) {
+        _username.value = newUsername
+    }
 }
